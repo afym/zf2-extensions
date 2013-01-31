@@ -10,12 +10,23 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        $userLabel = array('id' => 'userLabel', 'content' => 'User : ');
+        $passwordLabel = array('id' => 'passwordLabel', 'content' => 'Password : ');
+        $userText = array('id' => 'usuario', 'name' => 'usuario');
+        $password = array('id' => 'usuario', 'name' => 'password');
+        $forgot = array('id' => 'forgot', 'name' => 'forgot', 'href' => '#', 'content' => 'Forgot your password?');
+
+        return array(
+            'userText'      => $userText,
+            'password'      => $password,
+            'userLabel'     => $userLabel,
+            'passwordLabel' => $passwordLabel,
+            'forgot'        => $forgot,
+        );
     }
 }

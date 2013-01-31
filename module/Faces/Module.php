@@ -15,6 +15,18 @@ class Module implements AutoloaderProviderInterface
         return include __DIR__ . '/config/service.config.php';
     }
 
+    public function getViewHelperConfig()
+    {
+        return array(
+            'invokables' => array(
+                'text'     => 'Faces\Controls\Text',
+                'password' => 'Faces\Controls\Password',
+                'label'    => 'Faces\Controls\Label',
+                'link'     => 'Faces\Controls\Link',
+            ),
+        );
+    }
+
     public function getAutoloaderConfig()
     {
         return array(
