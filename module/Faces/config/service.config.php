@@ -1,4 +1,7 @@
 <?php
 namespace Faces;
 
-return array();
+return array(
+    'invokables' => array(
+    ),
+);

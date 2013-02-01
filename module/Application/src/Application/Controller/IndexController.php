@@ -10,23 +10,26 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
+use Faces\Standar\Text;
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        $userLabel = array('id' => 'userLabel', 'content' => 'User : ');
-        $passwordLabel = array('id' => 'passwordLabel', 'content' => 'Password : ');
-        $userText = array('id' => 'usuario', 'name' => 'usuario');
-        $password = array('id' => 'usuario', 'name' => 'password');
-        $forgot = array('id' => 'forgot', 'name' => 'forgot', 'href' => '#', 'content' => 'Forgot your password?');
+        $name = new Text();
+        $name->setId('name')
+             ->setName('name')
+             ->setValue('Angel Francisco');
+
+        $surname = new Text();
+        $surname->setId('surname')
+             ->setName('surname')
+             ->setValue('Ybarhuen Manrique')
+             ->setAttr('style', "color:red;")->setAttr('onclick', "alert('Au');");
 
         return array(
-            'userText'      => $userText,
-            'password'      => $password,
-            'userLabel'     => $userLabel,
-            'passwordLabel' => $passwordLabel,
-            'forgot'        => $forgot,
+            'name'    => $name,
+            'surname' => $surname,
         );
     }
 }

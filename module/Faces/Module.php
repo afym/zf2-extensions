@@ -19,10 +19,7 @@ class Module implements AutoloaderProviderInterface
     {
         return array(
             'invokables' => array(
-                'text'     => 'Faces\Controls\Text',
-                'password' => 'Faces\Controls\Password',
-                'label'    => 'Faces\Controls\Label',
-                'link'     => 'Faces\Controls\Link',
+                
             ),
         );
     }
