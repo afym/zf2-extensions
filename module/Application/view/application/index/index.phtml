@@ -1,3 +1,15 @@
 <!--http://netbeans.org/images_www/articles/portalpack/jsfPortletPalette.gif-->
-<?php echo $this->name ?>
-<?php echo $this->surname ?>
+
+<form>
+    <fieldset>
+        <legend>Client</legend>
+        Name : <?php echo $this->name ?>
+        Surname : <?php echo $this->surname ?>
+        Phone : <?php echo $this->phone ?>
+        <fieldset>
+            <legend>Sports</legend>
+            <?php echo $this->sports ?>
+        </fieldset>
+        <?php echo $this->google ?>
+    </fieldset>
+</form>
