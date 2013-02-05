@@ -1,13 +1,11 @@
 <?php
-namespace Faces\Standar\Base;
+namespace Faces\Base;
 
-abstract class Element
+class Element
 {
    protected $id;
    protected $name;
    protected $element;
-
-   abstract public function build();
 
    public function setId($id)
    {
@@ -33,6 +31,9 @@ abstract class Element
 
    public function getAttr($key, $value)
    {
+       if ($value == '') {
+           return '';
+       }
        return $key . '="' . $value . '"';
    }
 

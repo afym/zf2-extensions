@@ -1,15 +1,28 @@
 <!--http://netbeans.org/images_www/articles/portalpack/jsfPortletPalette.gif-->
-
-<form>
+<?php echo $this->form->getOpenTag() ?>
     <fieldset>
         <legend>Client</legend>
-        Name : <?php echo $this->name ?>
+        <?php echo $this->nameLbl ?> <?php echo $this->name ?>
         Surname : <?php echo $this->surname ?>
         Phone : <?php echo $this->phone ?>
+        Rol : <?php echo $this-> rol ?>
+        Jobs : <?php echo $this-> jobs ?>
+        Date : <?php echo $this->born ?>
+        Init : <?php echo $this->init ?>
+        Age : <?php echo $this->age ?>
         <fieldset>
             <legend>Sports</legend>
             <?php echo $this->sports ?>
         </fieldset>
         <?php echo $this->google ?>
     </fieldset>
-</form>
+    <?php echo $this->button ?>
+    
+    <?php echo $this->comment ?>
+<?php echo $this->form->getCloseTag() ?>
+
+<?php echo $this->image ?>
+<script type="text/javascript">
+$(function(){
+});
+</script>

@@ -1,7 +1,7 @@
 <?php
 namespace Faces\Standar;
 
-use Faces\Standar\Base\Element;
+use Faces\Base\Element;
 
 class Select extends Element
 {
@@ -17,9 +17,11 @@ class Select extends Element
        $this->optionsArray = array();
    }
 
-   public function setSelected($value)
+   public function setValue($value)
    {
        $this->selected = $value;
+
+       return $this;
    }
 
    public function setOption($value, $name)
@@ -32,6 +34,8 @@ class Select extends Element
    public function setOptions(array $options)
    {
        $this->optionsArray += $options;
+
+       return $this;
    }
 
    private function getOptions()
@@ -51,7 +55,7 @@ class Select extends Element
        }
    }
 
-   public function build()
+   private function build()
    {
         $this->getOptions();
         $this->replacePattern('%id', $this->getAttr('id', $this->id));

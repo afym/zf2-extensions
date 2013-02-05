@@ -1,7 +1,7 @@
 <?php
 namespace Faces\Standar;
 
-use Faces\Standar\Base\Element;
+use Faces\Base\Element;
 
 class CheckBox extends Element
 {
@@ -35,7 +35,7 @@ class CheckBox extends Element
        $this->checked = 'checked="checked"';
    }
 
-   public function build()
+   private function build()
    {
         $this->replacePattern('%id', $this->getAttr('id', $this->id));
         $this->replacePattern('%name', $this->getAttr('name', $this->name));

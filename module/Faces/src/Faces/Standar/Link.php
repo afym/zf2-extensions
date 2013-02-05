@@ -1,7 +1,7 @@
 <?php
 namespace Faces\Standar;
 
-use Faces\Standar\Base\Element;
+use Faces\Base\Element;
 
 class Link extends Element
 {
@@ -11,7 +11,7 @@ class Link extends Element
 
    public function __construct()
    {
-       $this->element = '<a %id %name %href %target %attr>%body</a>';
+       $this->element = '<a %id %href %target %attr>%body</a>';
        $this->body = 'link';
        $this->href = '#';
        $this->target = '_self';
@@ -38,10 +38,9 @@ class Link extends Element
        return $this;
    }
 
-   public function build()
+   private function build()
    {
         $this->replacePattern('%id', $this->getAttr('id', $this->id));
-        $this->replacePattern('%name', $this->getAttr('name', $this->name));
         $this->replacePattern('%href', $this->getAttr('href', $this->href));
         $this->replacePattern('%target', $this->getAttr('target', $this->target));
         $this->replacePattern('%body', $this->body);

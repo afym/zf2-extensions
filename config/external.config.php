@@ -1,4 +1,4 @@
 <?php
 return array(
-    'zend' => '/home/fybarhuen/Documentos' // the complete route of your zf2 library
+    'zend' => 'D:\Desarrollo\librerias-recursos\php\zf2\library' // the complete route of your zf2 library
 );

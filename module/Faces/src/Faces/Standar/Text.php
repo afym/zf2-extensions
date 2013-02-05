@@ -1,7 +1,7 @@
 <?php
 namespace Faces\Standar;
 
-use Faces\Standar\Base\Element;
+use Faces\Base\Element;
 
 class Text extends Element
 {
@@ -19,7 +19,7 @@ class Text extends Element
        return $this;
    }
 
-   public function build()
+   private function build()
    {
         $this->replacePattern('%id', $this->getAttr('id', $this->id));
         $this->replacePattern('%name', $this->getAttr('name', $this->name));

@@ -19,7 +19,7 @@ class Module implements AutoloaderProviderInterface
     {
         return array(
             'invokables' => array(
-                
+                'facesCommonLoad' => 'Faces\Helper\facesCommonLoad'
             ),
         );
     }

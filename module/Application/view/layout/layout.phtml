@@ -2,7 +2,12 @@
 <html>
     <head>
         <title>ZF2 Skeleton by AFYM</title>
-        <script src="http://code.jquery.com/jquery-migrate-1.1.0.min.js"></script>
+        <?php echo $this->headLink()->prependStylesheet($this->basePath('css/demos.css')) ?>
+        <?php echo $this->facesCommonLoad() ?>
+        <script type="text/javascript" src="<?php echo $this->basePath('js/jquery/ui/jquery.ui.datepicker.js') ?>"></script>
+        
+        <script type="text/javascript" src="<?php echo $this->basePath('js/jquery/ui/jquery.ui.button.js') ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->basePath('js/jquery/ui/jquery.ui.spinner.js') ?>"></script>
     </head>
     <body>
         <h1 style="color: yellowgreen; text-align: center;"> Zend Framework <span style="color: black;">2</span> Simple Skeleton</h1>
